@@ -1,0 +1,14 @@
+<ng-container>
+  <h1 mat-dialog-title>
+    {{data.breeds ? (data.breeds[0].name.toString()) : "Animal" }}<button mat-button [mat-dialog-close] cdkFocusInitial>x</button>
+  </h1>
+  <div mat-dialog-content>
+    <img
+      class="cats-list-item-image"
+      mat-card-image
+      [src]="data.url"
+      alt="Photo of a Shiba Inu"
+    />
+    <p *ngIf="data.breeds">{{data.breeds[0].description}}</p>
+  </div>
+</ng-container>

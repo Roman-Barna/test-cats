@@ -1,0 +1,28 @@
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  border-top: 1px solid #fff;
+  padding-top: 20px;
+
+  &-block {
+    margin: 0 20px;
+    color: #fff;
+
+    .mat-select-value,
+    .mat-form-field-label,
+    .mat-select-arrow,
+    .mat-input-element {
+      color: white !important;
+    }
+
+    .mat-form-field-underline {
+      background-color: white !important;
+    }
+
+    .mat-input-element {
+      caret-color: white !important;
+    }
+  }
+}

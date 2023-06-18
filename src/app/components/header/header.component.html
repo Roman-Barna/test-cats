@@ -1,0 +1,28 @@
+<header class="header">
+  <div class="header-row">
+    <div class="header-row-logo">
+      <img src="/assets/logo.png" />
+      TheCatAPI - Documentation Portal
+    </div>
+    <nav class="header-row-menu">
+      <li
+        routerLink="/cat"
+        routerLinkActive="active"
+        class="header-row-menu-item"
+      >
+        Cats
+      </li>
+      <li
+        routerLink="/dog"
+        routerLinkActive="active"
+        class="header-row-menu-item"
+      >
+        Dogs
+      </li>
+    </nav>
+    <div (click)="showFilters = !showFilters" class="header-row-filter">
+      Filters: <mat-icon>horizontal_split</mat-icon>
+    </div>
+  </div>
+  <app-filter-form [hidden]="!showFilters"></app-filter-form>
+</header>

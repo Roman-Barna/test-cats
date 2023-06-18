@@ -1,0 +1,24 @@
+<form class="form" [formGroup]="formGroup" novalidate>
+  <mat-form-field class="form-block">
+    <mat-label class="form-block-label">chose</mat-label>
+    <mat-select class="form-block-select" formControlName="selectCount">
+      <ng-container *ngFor="let number of [5, 10, 25, 100]">
+        <mat-option class="form-block-select-options" selected [value]="number">{{ number }}</mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="form-block">
+    <mat-label>filters</mat-label>
+    <mat-select formControlName="selectFilter">
+      <mat-option selected value="">All</mat-option>
+      <ng-container *ngFor="let number of selectData">
+        <mat-option [value]="number.id">{{ number.name }}</mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="form-block">
+    <mat-label>Search cat</mat-label>
+    <input matInput type="text" (input)="inputSearchField($event)" />
+  </mat-form-field>
+</form>
